@@ -1,0 +1,29 @@
+<% include header.ejs %>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url(../images/bg-01.jpg);">
+					<span class="login100-form-title-1">
+						<%= title %>
+					</span>
+				</div>
+				<form class="login100-form validate-form" action="<%= action %>" method="post">
+				<p><%= NotificationLog %></p>
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "UniqueCode is required">
+						<span class="label-input100">UniqueCode</span>
+						<input class="input100" type="password" name="password" placeholder="Enter password" autofocus>
+						<span class="focus-input100"></span>
+					</div>
+					<input type="hidden" name="type" value="<%- type %>"/>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<% include footer.ejs %>
